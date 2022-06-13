@@ -51,15 +51,22 @@ export default function MainDisplay() {
       // const data = await fetch(
       //   `https://gnews.io/api/v4/search?q=${searchingFor}&lang=en&token=${process.env.G_NEWS_API_TOKEN}`
       // );
-      const data = await fetch(
-        `https://gnews.io/api/v4/search?q=${searchingFor}&lang=en&token=6f03e766d6fb6087a3ebce14a0172ce6`
-      );
+      try {
+        const data = await fetch(
+          `https://gnews.io/api/v4/search?q=${searchingFor}&lang=en&token=6f03e766d6fb6087a3ebce14a0172ce6`
+        );
 
-      const jsonData = await data.json();
+        const jsonData = await data.json();
 
-      console.log("inside the usEffect", jsonData.articles);
-
-      setNews(jsonData.articles);
+        console.log("inside the usEffect", jsonData.articles);
+        if (jsonData.articles[0]) {
+          setNews(jsonData.articles);
+        } else {
+          throw new Error();
+        }
+      } catch (err) {
+        return new Error("third party API not working");
+      }
     };
 
     getNewsFromGNewsApi();
