@@ -4,7 +4,6 @@ import { Container } from "../styles/Container";
 import { GridContainer } from "../styles/GridContainer";
 import { GridItem } from "../styles/GridItem";
 import { InputField } from "../styles/InputField";
-import { Typography } from "../styles/Typography";
 import Title from "../Title";
 import css from "./MainDisplay.module.css";
 
