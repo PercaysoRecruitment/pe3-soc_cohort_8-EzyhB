@@ -25,7 +25,7 @@ export default function NewsReport({
       <img src={image} alt={title} />
 
       <Typography>{description}</Typography>
-      <a href={url} target="_blank">
+      <a href={url} target="_blank" rel="noreferrer">
         <Typography>Read more...</Typography>
       </a>
     </Container>
