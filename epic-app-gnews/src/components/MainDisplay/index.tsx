@@ -83,6 +83,7 @@ export default function MainDisplay() {
               description={el.description}
               content={el.content}
               image={el.image}
+              url={el.url}
             />
           </GridItem>
         ))}

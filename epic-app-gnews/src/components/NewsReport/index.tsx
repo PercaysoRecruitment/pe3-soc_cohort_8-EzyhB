@@ -9,6 +9,7 @@ interface Props {
   description: string;
   content: string;
   image: string;
+  url: string;
 }
 
 export default function NewsReport({
@@ -16,6 +17,7 @@ export default function NewsReport({
   description,
   content,
   image,
+  url,
 }: Props) {
   return (
     <Container className={css.cardBody}>
@@ -23,6 +25,9 @@ export default function NewsReport({
       <img src={image} alt={title} />
 
       <Typography>{description}</Typography>
+      <a href={url} target="_blank">
+        <Typography>Read more...</Typography>
+      </a>
     </Container>
   );
 }
