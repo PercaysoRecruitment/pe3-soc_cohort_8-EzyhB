@@ -1,0 +1,10 @@
+.titleContainer {
+  display: flex;
+
+  justify-content: center;
+}
+.titleText {
+  display: flex;
+
+  justify-content: center;
+}

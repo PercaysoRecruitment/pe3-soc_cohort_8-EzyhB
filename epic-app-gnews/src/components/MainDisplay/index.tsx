@@ -5,6 +5,7 @@ import { GridContainer } from "../styles/GridContainer";
 import { GridItem } from "../styles/GridItem";
 import { InputField } from "../styles/InputField";
 import { Typography } from "../styles/Typography";
+import Title from "../Title";
 import css from "./MainDisplay.module.css";
 
 const initialState = [
@@ -67,6 +68,7 @@ export default function MainDisplay() {
 
   return (
     <Container>
+      <Title Title="The Amazing News App" />
       <Container className={css.inputContainer}>
         <InputField
           setSearchFor={setSearchingFor}
