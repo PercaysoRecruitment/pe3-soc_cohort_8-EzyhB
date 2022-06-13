@@ -77,7 +77,7 @@ export default function MainDisplay() {
 
       <GridContainer>
         {news.map((el, index) => (
-          <GridItem md="four">
+          <GridItem md="four" key={index}>
             <NewsReport
               title={el.title}
               description={el.description}
